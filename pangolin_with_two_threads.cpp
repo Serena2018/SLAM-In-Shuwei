@@ -17,7 +17,7 @@ void *Map_Drawer(void *arg)
 
     ifstream infile;
 
-    infile.open("../data/KITTI/CameraTrajectory_KITTI.txt");
+    infile.open("../CameraTrajectory_KITTI.txt");
 
     if(!infile)
     {
@@ -60,7 +60,7 @@ void *Map_Drawer(void *arg)
 
     std::vector<Eigen::Vector3f> pointcloud;
 
-    loadObjFile("../data/KITTI/pointcloud.obj", pointcloud);
+    loadObjFile("../pointcloud.obj", pointcloud);
 
     // draw trajectory in pangolin
     cout << "wifilocations size---- = " << wifilocations.size() <<endl;
@@ -76,7 +76,7 @@ void *WiFi_Drawer(void *arg)
 
     ifstream infile;
 
-    infile.open("../data/KITTI/CameraTrajectory_KITTI.txt");
+    infile.open("../CameraTrajectory_KITTI.txt");
 
     if(!infile)
     {
